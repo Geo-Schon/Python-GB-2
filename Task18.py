@@ -1,26 +1,16 @@
-n = int(input('Введите колиличество элементов: '))
+n = int(input('Введите количество элементов: '))
 count = 0
-lst = []
-lst.append(list(map(int, input().split())))
+lst = list(map(int, input('Введите элементы списка через пробел: ').split()))
 
-if len (lst) != n or n == 0:
-    print('Условия нарушены! Элементы не соотвествуют количеству')
+if len(lst) != n or n == 0:
+    print('Число введенных элементов не соответствуют заявленному количеству!')
 else:
     X = int(input('Введите число X: '))
-    for i in range(1, n + 1):
-        if lst[i] == X:
-            count += 1
-    print(f'Число {X} встречается {count} раз')
-
-if len(A_num) != N or N == 0:
-    print('Введенные элементы не соответствуют заявленному количеству!')
-else:
-    X = int(input('Введите число X, с которым необходимо сравнивать элементы списка: '))
-    min = abs(X - A_num[0])
+    mini = abs(X - lst[0])
     index = 0
-    for i in range(1, N):
-        count = abs(X - A_num[i])
-        if count < min:
-            min = count
+    for i in range(n):
+        count = abs(X - lst[i])
+        if count < mini:
+            mini = count
             index = i
-    print(f'Число {A_num[index]} в списке A наиболее близко по величине к числу {X}, их разница составляет {abs(X - A_num[index])}')
+    print(f'Число {lst[index]} - наиболее близкое к числу {X}, их разница составляет {abs(X - lst[index])}')
