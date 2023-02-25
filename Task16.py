@@ -1,13 +1,12 @@
-n = int(input('Введите колиличество элементов: '))
+n = int(input('Введите количество элементов: '))
 count = 0
-lst = []
-lst.append(list(map(int, input('Введите элементы списка через пробел: ').split())))
+lst = list(map(int, input('Введите элементы списка через пробел: ').split()))
 
-X = int(input('Введите число X: '))
 if len (lst) != n:
-    print('Элемент не найден')
+    print('Условия нарушены! Неправильное количество элементов списка')
 else:
-    for i in range(1, n + 1):
+    X = int(input('Введите число X: '))
+    for i in range(n):
         if lst[i] == X:
             count += 1
     print(f'Число {X} встречается {count} раз')
