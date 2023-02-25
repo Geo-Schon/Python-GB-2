@@ -1,7 +1,7 @@
 n = int(input('Введите колиличество элементов: '))
 count = 0
 lst = []
-lst.append(list(map(int, input().split())))
+lst.append(list(map(int, input('Введите элементы списка через пробел: ').split())))
 
 X = int(input('Введите число X: '))
 if len (lst) != n:
